@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="numero"> </p>
+    <p id="editar"> texto</p>
+    <script >
+        const numero= Number(prompt('digite um número:'));//recebe número 
+        const texte_editavel = document.getElementsById("editar");// seleciona campo expecifica para editar
+        texte_editavel.innerHTML = numero;//texto_editavel recebe innerhtml ,logo ele vai ficar realmente editavel
+        //quando ele ficar editavel o que vai definir o que ele é é o numero que eu escrever no prompt 
+    </script>
+    <!-- <body>
+        <p id="numero"> </p>
+        <p id="editar"> texto</p>
+        <script>
+            const numero = Number(prompt('Digite um número:'));
+            const texto_editavel = document.getElementById("editar");
+            texto_editavel.innerHTML = numero;
+        </script>
+    </body> -->
+    
+     
+   <!--  <script>
+        let numero = Number(prompt('Digite um número: '));
+        document.body.innerHTML = ('seu nomero arrendodado para baixo é '+Math.floor(numero))+'<br>';// todo metodo começa com letra maiuscula , nao esquece isso.
+        document.body.innerHTML +=('seu nomero arrendodado para cima é '+Math.ceil(numero))+'<br>';// mais igual na sentança vai fazer com que o codigo pule uma linha para exercultar o codigo.
+       document.body.innerHTML += ('seu numero com duas casas decimais é '+numero.toFixed(2))+'<br>';
+       document.body.innerHTML+=('seu número é um número inteiro:'+ Number.isInteger(numero));
+        /* document.body.innerHTML =  */
+    </script> -->
+</body>
+</html>

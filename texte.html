@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="titulo"></h1>
+    <p id="texto"></p>
+    <script>
+        const numero = Number(prompt('Digite um número: '));
+        const num_titulo = document.getElementById('titulo');
+        let editavel = document.getElementById('texto');
+        num_titulo.innerHTML = numero;
+        editavel.innerHTML += `<p>A raiz quadrada desse número é ${Math.sqrt(numero)}</p><br>`;
+        editavel.innerHTML += `<p>Esse número é inteiro: ${Number.isInteger(numero)}</p><br>`;
+        editavel.innerHTML += `<p>Esse texto é um número: ${isNaN(numero)}</p><br>`;
+        editavel.innerHTML += `<p>Esse número arredondado para baixo é: ${Math.floor(numero)}</p>`;
+        editavel.innerHTML += `<p>Esse número arredondado para cima é: ${Math.ceil(numero)}</p>`;
+    </script>
+</body>
+
+</html>
