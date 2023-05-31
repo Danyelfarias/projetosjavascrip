@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+</head>
+<body>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Nomes</legend>
+            <input type="radio" name="ESTADO" id="CE"><label for="rca">CE</label>
+            <input type="radio" name="ESTADO" id="PI"><label for="rca2">PI</label>
+            <input type="radio" name="ESTADO" id="RN"><label for="rca3">RN</label>
+        </fieldset>
+
+        <p id="listaCE" style="display: none;">
+            <select name="farmace" id="farmace">
+                <optgroup>
+                    <option value="RCACE">FABRICIO</option>
+                    <option value="RCAPI">CLOVIS</option>
+                    <option value="RCARN">VITOR</option>
+                </optgroup>
+            </select>
+        </p>
+        <p id="listaPI" style="display: none;">
+            <select name="farmarn" id="farmarn">
+                <optgroup>
+                    <option value="RCACE">ferreira</option>
+                    <option value="RCAPI">algusto</option>
+                    <option value="RCARN">creusa</option>
+                </optgroup>
+            </select>
+        </p>
+        <p id="listaRN" style="display: none;">
+            <select name="farmapi" id="farmapi">
+                <optgroup>
+                    <option value="RCACE">marcelo</option>
+                    <option value="RCAPI">neymar</option>
+                    <option value="RCARN">gabigol</option>
+                </optgroup>
+            </select>
+        </p>
+
+        <script>
+            let rca_1 = window.document.getElementById('CE');
+            let rca_2 = window.document.getElementById('PI');
+            let rca_3 = window.document.getElementById('RN');
+            let listaCE = window.document.getElementById('listaCE');
+            let listaPI = window.document.getElementById('listaPI');
+            let listaRN = window.document.getElementById('listaRN');
+
+            rca_1.addEventListener('change', function() {
+                if (rca_1.checked) {
+                    listaCE.style.display = 'block';
+                    listaPI.style.display = 'none';
+                    listaRN.style.display = 'none';
+                }
+            });
+
+            rca_2.addEventListener('change', function() {
+                if (rca_2.checked) {
+                    listaCE.style.display = 'none';
+                    listaPI.style.display = 'block';
+                    listaRN.style.display = 'none';
+                }
+            });
+
+            rca_3.addEventListener('change', function() {
+                if (rca_3.checked) {
+                    listaCE.style.display = 'none';
+                    listaPI.style.display = 'none';
+                    listaRN.style.display = 'block';
+                }
+            });
+        </script>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html
